@@ -8,10 +8,8 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
 
-	<bean name="paitent"
-		class="com.abhi.springcore.lc.annotation.Paitent" p:id="123"></bean>
-		
-		<!-- <bean class="org.springframework.context.annotation.CommonAnnotationBeanPostProcessor"></bean> -->
-		
-		<context:annotation-config></context:annotation-config>
+	<bean class="com.abhi.springcore.dependencycheck.Prescription"
+		name="prescription" p:id="111"></bean>
+
+	<context:annotation-config />
 </beans>

@@ -1,8 +1,5 @@
 package com.abhi.springcore.lc.annotation;
 
-import javax.annotation.PostConstruct;
-import javax.annotation.PreDestroy;
-
 import org.springframework.beans.factory.DisposableBean;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.context.annotation.CommonAnnotationBeanPostProcessor;
@@ -24,12 +21,12 @@ public class Paitent {
 		this.id = id;
 	}
 
-	@PostConstruct
+	//@PostConstruct
 	private void hi() {
 		System.out.println("Init");
 	}
 
-	@PreDestroy
+	//@PreDestroy
 	private void bye() {
 		System.out.println("destroy");
 	}

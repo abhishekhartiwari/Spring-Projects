@@ -3,15 +3,23 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns:context="http://www.springframework.org/schema/context"
 	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:c="http://www.springframework.org/schema/c"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans
     http://www.springframework.org/schema/beans/spring-beans.xsd
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
 
-	<bean name="paitent"
-		class="com.abhi.springcore.lc.annotation.Paitent" p:id="123"></bean>
-		
-		<!-- <bean class="org.springframework.context.annotation.CommonAnnotationBeanPostProcessor"></bean> -->
-		
-		<context:annotation-config></context:annotation-config>
+	<bean class="com.abhi.springcore.constructorinjection.Address"
+		name="address" p:hno="11" p:country="IND">
+
+	</bean>
+
+	<!-- <bean class="com.abhi.springcore.constructorinjection.Employee"
+		name="employee">
+		<constructor-arg value="123" />
+		<constructor-arg ref="address" />
+	</bean> -->
+	<bean class="com.abhi.springcore.constructorinjection.Employee"
+		name="employee" c:id="111" c:address-ref="address"></bean>
+	
 </beans>

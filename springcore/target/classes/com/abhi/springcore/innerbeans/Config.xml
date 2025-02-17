@@ -8,10 +8,12 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
 
-	<bean name="paitent"
-		class="com.abhi.springcore.lc.annotation.Paitent" p:id="123"></bean>
-		
-		<!-- <bean class="org.springframework.context.annotation.CommonAnnotationBeanPostProcessor"></bean> -->
-		
-		<context:annotation-config></context:annotation-config>
+	<bean class="com.abhi.springcore.innerbeans.Employee"
+		name="employee" p:id="123">
+		<property name="address">
+			<bean class="com.abhi.springcore.innerbeans.Address" p:hno="200"
+				p:country="USA">
+			</bean>
+		</property>
+	</bean>
 </beans>
