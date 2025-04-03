@@ -15,9 +15,7 @@ public class WebServletConfiguration implements WebApplicationInitializer {
 
 		AnnotationConfigWebApplicationContext c = new AnnotationConfigWebApplicationContext();
 		c.register(SpringConfig.class);
-		
-		
-		
+
 		ServletRegistration.Dynamic servlet = servletContext.addServlet("dispatcher", new DispatcherServlet(c));
 		servlet.setLoadOnStartup(1);
 		servlet.addMapping("/");
